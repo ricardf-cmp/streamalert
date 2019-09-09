@@ -15,10 +15,9 @@ limitations under the License.
 """
 from collections import OrderedDict
 
+import os
 from mock import Mock, patch
 from nose.tools import assert_equal
-
-import os
 
 import stream_alert.classifier.classifier as classifier_module
 from stream_alert.classifier.classifier import Classifier
