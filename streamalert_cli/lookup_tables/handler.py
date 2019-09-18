@@ -346,7 +346,7 @@ class LookupTablesGetKeySubCommand(CLICommand):
         print()
         print('  Type:  {}'.format(type(value)))
 
-        if isinstance(value, dict) or isinstance(value, list):
+        if isinstance(value, (list, dict)):
             # Render lists and dicts a bit better to make them easier to read
             print('  Value:')
             print(json.dumps(value, indent=2))
@@ -439,4 +439,3 @@ class LookupTablesSetSubCommand(CLICommand):
         LookupTablesMagic.set_table_value(table, key, new_value)
 
         return True
-
